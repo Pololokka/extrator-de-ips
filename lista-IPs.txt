@@ -13,7 +13,7 @@ teste pra ver se pega no meio da string 99.99.111.111 qualquer coisa aqui
 22.222.22.222 teste pra ver se pega no começo da string
 teste pra ver se pega em parênteses (22.111.111.22)
 teste pra ver se pega em colchete [22.22.22.22]
-teste pra ver se pega em rDNS 111.22.22.113.telesp.com
+teste pra ver se pega em rDNS 111.22.22.113.teste.com
 teste pra ver se pega com hífen 111-11-222-22
 
 string teste sem IP
