@@ -10,6 +10,8 @@ if(os.path.exists(r".\lista-ips.txt")):
         os.remove("IPs-tratados.txt")    
 
     txtFile = open("IPs-tratados.txt","w+")
+    
+    IParray = []
         
     schema = re.compile(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})') 
 
@@ -17,7 +19,13 @@ if(os.path.exists(r".\lista-ips.txt")):
         ip = re.findall( schema, line )
         if ip:
             for i in ip:
-                txtFile.write(i + "\n")
+                IParray.append(i)
+    
+    IParray = list( dict.fromkeys(IParray) )
+    
+    for item in IParray:
+        txtFile.write(item + "\n")
+    
 else:
     messagebox.showerror("Erro", "Favor criar um arquivo de texto(.txt) chamado 'lista-ips' no mesmo diretório deste aplicativo")
     
